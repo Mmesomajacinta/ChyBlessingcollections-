@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="CHY BLESSING Collections - fashion, shoes, kitchen and home appliances, toys and more. Available on ground and pre-order.">
+<title>CHY BLESSING Collections | Style, Quality & Elegance</title>
+<style>
+:root{
+  --gold:#f4c430;
+  --dark:#111111;
+  --dark2:#1b1b1b;
+  --cream:#fffaf0;
+  --white:#ffffff;
+  --muted:#777;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--dark);line-height:1.6}
+a{text-decoration:none;color:inherit}
+header{
+  position:sticky;top:0;z-index:1000;
+  background:rgba(17,17,17,.97);color:#fff;
+  box-shadow:0 3px 15px rgba(0,0,0,.18)
+}
+.nav{max-width:1100px;margin:auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.4px}
+.brand img{width:45px;height:45px;border-radius:50%;object-fit:cover;border:2px solid var(--gold)}
+.brand span{font-size:15px}
+nav{display:flex;gap:15px;flex-wrap:wrap}
+nav a{font-size:13px;color:#fff}
+nav a:hover{color:var(--gold)}
+.hero{
+  min-height:72vh;display:flex;align-items:center;
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.42)),
+    url("images/kids-dress-blue.jpg") center/cover;
+  color:#fff;padding:55px 18px
+}
+.hero-inner{max-width:1100px;width:100%;margin:auto}
+.badge{display:inline-block;background:var(--gold);color:#111;padding:7px 13px;border-radius:30px;font-weight:800;font-size:12px;margin-bottom:16px}
+.hero h1{font-size:clamp(34px,8vw,70px);line-height:1.03;max-width:750px;margin-bottom:18px}
+.hero h1 span{color:var(--gold)}
+.hero p{max-width:650px;font-size:17px;color:#f4f4f4;margin-bottom:25px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 19px;border-radius:8px;font-weight:800;border:2px solid var(--gold)}
+.btn.primary{background:var(--gold);color:#111}
+.btn.secondary{color:#fff}
+section{max-width:1100px;margin:auto;padding:65px 18px}
+.section-title{text-align:center;margin-bottom:35px}
+.section-title h2{font-size:32px;margin-bottom:8px}
+.section-title p{color:var(--muted)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+.about img{width:100%;max-height:430px;object-fit:cover;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.12)}
+.about-text h3{font-size:28px;margin-bottom:12px}
+.about-text p{margin-bottom:13px;color:#444}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:25px}
+.feature{background:#fff;padding:22px;border-radius:14px;border-top:4px solid var(--gold);box-shadow:0 7px 25px rgba(0,0,0,.07)}
+.feature h4{margin-bottom:6px}
+.feature p{font-size:14px;color:#666}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border-radius:15px;overflow:hidden;box-shadow:0 7px 25px rgba(0,0,0,.08)}
+.card img{width:100%;height:220px;object-fit:cover}
+.card-body{padding:17px}
+.card h3{margin-bottom:7px}
+.card p{font-size:14px;color:#666;margin-bottom:14px}
+.card .small-btn{display:inline-block;background:#111;color:#fff;padding:9px 13px;border-radius:7px;font-size:13px;font-weight:700}
+.order{
+  background:#111;color:#fff;max-width:none;
+  text-align:center;padding:65px 18px
+}
+.order-inner{max-width:850px;margin:auto}
+.order h2{font-size:34px;margin-bottom:10px}
+.order p{color:#ddd;margin-bottom:22px}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.contact-card{background:#fff;padding:22px;border-radius:14px;text-align:center;box-shadow:0 7px 25px rgba(0,0,0,.07)}
+.contact-card strong{display:block;margin-bottom:7px}
+.contact-card a{color:#8a6500;font-weight:700;word-break:break-word}
+footer{background:#0c0c0c;color:#bbb;text-align:center;padding:25px 18px;font-size:13px}
+footer strong{color:var(--gold)}
+.float{
+  position:fixed;right:18px;bottom:18px;z-index:100;
+  background:#25D366;color:#fff;width:56px;height:56px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-size:25px;
+  box-shadow:0 5px 20px rgba(0,0,0,.25)
+}
+@media(max-width:800px){
+  nav{display:none}
+  .about,.features,.products,.contact-grid{grid-template-columns:1fr}
+  .hero{min-height:78vh}
+  .hero p{font-size:15px}
+  section{padding:50px 16px}
+  .products .card img{height:245px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="#home">
+      <img src="images/logo.jpg" alt="CHY BLESSING Collections logo">
+      <span>CHY BLESSING Collections</span>
+    </a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#order">Order</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <span class="badge">STYLE • QUALITY • ELEGANCE</span>
+    <h1>Shop with <span>confidence</span> and class.</h1>
+    <p>
+      Welcome to CHY BLESSING Collections — your destination for carefully selected
+      fashion, footwear, kitchen and home appliances, toys, accessories and more.
+      We offer items available on ground and convenient pre-order options.
+    </p>
+    <div class="buttons">
+      <a class="btn primary" href="https://wa.me/2348137614045?text=Hello%20CHY%20BLESSING%20Collections%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank">Order on WhatsApp</a>
+      <a class="btn secondary" href="#products">View Products</a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="section-title">
+    <h2>About Us</h2>
+    <p>Elegance, quality and style in one collection.</p>
+  </div>
+  <div class="about">
+    <img src="images/kids-dress-yellow.jpg" alt="Children's fashion from CHY BLESSING Collections">
+    <div class="about-text">
+      <h3>CHY BLESSING Collections</h3>
+      <p>
+        CHY BLESSING Collections is a premium fashion and lifestyle brand where
+        elegance, quality and style come together.
+      </p>
+      <p>
+        We offer carefully selected and beautifully designed outfits for women,
+        men and children who love to stand out with confidence and class.
+      </p>
+      <p>
+        We also pre-order a variety of goods, while selected products are available
+        on ground for customers who want quick access.
+      </p>
+    </div>
+  </div>
+
+  <div class="features">
+    <div class="feature"><h4>✨ Quality Selection</h4><p>Carefully selected products for style and everyday needs.</p></div>
+    <div class="feature"><h4>📦 Pre-Order</h4><p>Ask us about items you want us to source for you.</p></div>
+    <div class="feature"><h4>🛍️ Available on Ground</h4><p>Selected products are already available for purchase.</p></div>
+  </div>
+</section>
+
+<section id="products">
+  <div class="section-title">
+    <h2>Our Collections</h2>
+    <p>Something stylish and useful for everyone.</p>
+  </div>
+  <div class="products">
+    <article class="card">
+      <img src="images/kids-dress-blue.jpg" alt="Children's blue dress">
+      <div class="card-body"><h3>Children's Wears</h3><p>Beautiful children's outfits for different occasions.</p><a class="small-btn" href="https://wa.me/2348137614045?text=Hello%2C%20I%20am%20interested%20in%20children%27s%20wears." target="_blank">Ask for Price</a></div>
+    </article>
+    <article class="card">
+      <img src="images/kids-dress-yellow.jpg" alt="Children's yellow dress">
+      <div class="card-body"><h3>Women & Men's Wears</h3><p>Fashion pieces selected for confidence, comfort and class.</p><a class="small-btn" href="https://wa.me/2348137614045?text=Hello%2C%20I%20am%20interested%20in%20adult%20wears." target="_blank">Ask for Price</a></div>
+    </article>
+    <article class="card">
+      <img src="images/kids-bags.jpg" alt="Children's backpacks">
+      <div class="card-body"><h3>Toys & Accessories</h3><p>Fun, useful and stylish items for children and families.</p><a class="small-btn" href="https://wa.me/2348137614045?text=Hello%2C%20I%20am%20interested%20in%20toys%20or%20accessories." target="_blank">Ask for Price</a></div>
+    </article>
+    <article class="card">
+      <img src="images/air-fryer.jpg" alt="Kitchen air fryer">
+      <div class="card-body"><h3>Kitchen Appliances</h3><p>Kitchen equipment and appliances for your home.</p><a class="small-btn" href="https://wa.me/2348137614045?text=Hello%2C%20I%20am%20interested%20in%20kitchen%20appliances." target="_blank">Ask for Price</a></div>
+    </article>
+    <article class="card">
+      <img src="images/home-furniture.jpg" alt="Home furniture">
+      <div class="card-body"><h3>Home Appliances & Items</h3><p>Selected home products to make your space comfortable and beautiful.</p><a class="small-btn" href="https://wa.me/2348137614045?text=Hello%2C%20I%20am%20interested%20in%20home%20items." target="_blank">Ask for Price</a></div>
+    </article>
+    <article class="card">
+      <img src="images/logo.jpg" alt="CHY BLESSING Collections">
+      <div class="card-body"><h3>More & Pre-Order</h3><p>Can't find what you need? Contact us to ask about pre-order items.</p><a class="small-btn" href="https://wa.me/2348137614045?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20a%20pre-order." target="_blank">Make Enquiry</a></div>
+    </article>
+  </div>
+</section>
+
+<section class="order" id="order">
+  <div class="order-inner">
+    <h2>Looking for something specific?</h2>
+    <p>
+      Send us a message with the item you want. We can tell you whether it is
+      available on ground or discuss a pre-order option.
+    </p>
+    <a class="btn primary" href="https://wa.me/2348137614045?text=Hello%20CHY%20BLESSING%20Collections%2C%20I%20want%20to%20make%20an%20order%20or%20enquiry." target="_blank">Chat on WhatsApp</a>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="section-title">
+    <h2>Contact Us</h2>
+    <p>We're ready to help you find what you need.</p>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-card"><strong>📱 Phone / WhatsApp</strong><a href="tel:+2348137614045">08137614045</a></div>
+    <div class="contact-card"><strong>💬 WhatsApp</strong><a href="https://wa.me/2348137614045" target="_blank">Start a chat</a></div>
+    <div class="contact-card"><strong>🛍️ Orders</strong><a href="https://wa.me/2348137614045?text=Hello%20CHY%20BLESSING%20Collections%2C%20I%20would%20like%20to%20place%20an%20order." target="_blank">Place an order</a></div>
+  </div>
+</section>
+</main>
+
+<a class="float" href="https://wa.me/2348137614045" target="_blank" aria-label="Chat on WhatsApp">💬</a>
+
+<footer>
+  <p>© 2026 <strong>CHY BLESSING Collections</strong>. All rights reserved.</p>
+  <p>Style • Quality • Elegance</p>
+</footer>
+
+</body>
+</html>
